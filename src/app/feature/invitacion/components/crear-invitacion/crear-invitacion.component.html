@@ -1,0 +1,32 @@
+<div class="container mt-3 mb-5">
+  <form [formGroup]="invitacionForm" (ngSubmit)="crear()">
+      <div class="row">
+          <div class="col-md-4">
+            <div class="mb-3">
+              <label for="idMembresia" class="form-label">ID membresia</label>
+              <select validar class="form-select form-control" aria-label="Seleccione la membresia" formControlName="idMembresia" id="idMembresia" name="idMembresia">
+                <option [value]="null" selected>Seleccione una Membresia</option>
+                <option *ngFor="let membresia of listaMembresias" [value]="membresia.id">{{membresia.cliente.nombre}} - {{ membresia.tipo}}</option>
+              </select>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="mb-3">
+              <label for="identificacionInvitado" class="form-label">Doc. Invitado</label>
+              <input validar type="number" class="form-control" formControlName="identificacionInvitado" id="identificacionInvitado" id="identificacionInvitado" placeholder="Digite la identificacion del invitado">
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="mb-3">
+              <label for="nombreInvitado" class="form-label">Nombre Invitado</label>
+              <input validar type="text" class="form-control" formControlName="nombreInvitado" id="nombreInvitado" id="nombreInvitado" placeholder="Digite el nombre del invitado">
+            </div>
+          </div>
+      </div>
+      <div class="row mt-3">
+          <div class="col-md-4 offset-md-5">
+              <button id="botonGuardarInvitacion" class="btn btn-success">Guardar</button>
+          </div>
+      </div>
+  </form>
+</div>

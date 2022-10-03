@@ -1,0 +1,33 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-10 offset-md-1">
+      <table class="table">
+        <caption>Listado de Membresias Activas</caption>
+        <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">Cliente</th>
+            <th scope="col">Fecha Inicio</th>
+            <th scope="col">Fecha Fin</th>
+            <th scope="col">Tipo Membresia</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr
+          *ngFor="let membresia of listaMembresias; let i = index">
+            <th scope="row">{{i+1}}</th>
+            <td>{{ membresia.cliente.nombre }}</td>
+            <td>{{ membresia.fechaInicio }}</td>
+            <td>{{ membresia.fechaFin }}</td>
+            <td>{{ membresia.tipo }}</td>
+            <td>
+              <button class="btn btn-danger" (click)="cancelarMembresia(membresia.id)">
+                Cancelar
+              </button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
