@@ -20,6 +20,8 @@ jobs:
       uses: actions/setup-node@v3
       with:
         node-version: 18.x
+    - run: npm install
+      name: Install dependencies
     - run: npm run test
       name: Run Test
     - run: npm run build
