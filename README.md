@@ -1,4 +1,4 @@
-# ADN GimnasioFront - jesus.salcedo Jesus Salcedo
+# ADN GimnasioFront - jesus.salcedo Jesus
 
 Proyecto ADN
 Líder ADN: Danny Mejia
